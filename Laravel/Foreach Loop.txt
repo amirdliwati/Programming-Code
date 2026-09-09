@@ -1,0 +1,8 @@
+$loop->index Returns a 0-based current loop iteration; 0 would mean the first iteration
+$loop->iteration Returns a 1-based current loop iteration; 1 would mean the first iteration
+$loop->remaining Number of iterations remaining in the loop; if there are a total of 10 iterations and the current iteration is 3, it would return 7
+$loop->count Returns the total number of iterations or the total number of items in the array
+$loop->first Returns true if it is the first iteration or item in the loop else returns false.
+$loop->last Returns true if it is the last iteration or item in the loop else return false.
+$loop->depth Returns the depth or nesting level of the current loop; returns 2 if it is a loop within a loop and 3 if it is nested one level more
+$loop->parentIf this loop is nested within another @foreach loop, parent returns the parent’s loop variable; If it is not tested, returns null

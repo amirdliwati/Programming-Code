@@ -1,0 +1,7 @@
+database master password fihf-bbpz-q68j
+database password asd123456
+
+localhost
+5432
+username openpg
+password openpgpwd

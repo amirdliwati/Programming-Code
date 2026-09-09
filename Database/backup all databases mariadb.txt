@@ -1,0 +1,10 @@
+cd C:\wamp64\bin\mariadb\mariadb11.4.9\bin
+
+$dbs = .\mariadb.exe -u root -p -e "SELECT schema_name FROM information_schema.schemata WHERE schema_name NOT IN ('information_schema', 'performance_schema', 'sys', 'mysql');" --silent --skip-column-names
+
+.\mariadb-dump.exe -u root -p --databases $dbs --routines --triggers --events > C:\wamp64\all_user_dbs.sql
+
+
+
+cd C:\wamp64\bin\mariadb\mariadb12.3.2\bin
+Get-Content C:\wamp64\all_user_dbs.sql | .\mariadb.exe -u root -p

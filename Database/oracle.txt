@@ -1,0 +1,24 @@
+orcl
+
+oracledb
+
+
+SYSTEM_DRIVE:\ sqlplus /nolog
+SQL> CONNECT SYS as SYSDBA
+Enter password: SYS_password
+
+
+apex
+@apexins.sql SYSAUX SYSAUX TEMP /i/
+
+admin
+mohamed.amir.58826@gmail.com
+asd123?
+
+apxchpwd.sql 
+
+apxldimg.sql C:\apex
+
+apex_epg_config.sql C:\apex
+
+select dbms_xdb.gethttpport from dual;

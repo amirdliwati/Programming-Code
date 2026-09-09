@@ -1,0 +1,3 @@
+/opt/plesk/php/8.1/bin/php /var/www/vhosts/naya-est.com/oms.naya-est.com/artisan Delete:Files
+
+Go to Tools & Settings > Scheduled Tasks > Settings and set the option Crontab shell to /bin/bash

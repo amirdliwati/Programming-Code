@@ -1,0 +1,15 @@
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/mohamadamirdliwati/Naya-Certificate.git
+git push -u origin master
+
+
+git remote add origin https://github.com/mohamadamirdliwati/Naya-Certificate.git
+git push -u origin master
+
+git Clone https://github.com/mohamadamirdliwati/Naya-Certificate.git
+
+git add .
+git commit -m "comment" 
+git push

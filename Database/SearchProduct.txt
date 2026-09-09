@@ -1,0 +1,28 @@
+CREATE proc [SearchProduct]
+@ID varchar(50)
+as
+SELECT [ID_PRODUCT] as '—ﬁ„ «·„‰ ÊÃ'
+      ,[LABEL_PRODUCT] as 'Ê’› «·„‰ ÊÃ'
+      ,[QTE_IN_STOCK] as '«·ﬂ„Ì… «·„Œ“‰…'
+      ,[PRICE] as '«·„Ì·€'
+      ,DESCRIPTION_CAT as '«·’‰›'
+  FROM [Product_DB].[dbo].[PRODUCTS]
+INNER join CATEGORIES
+ON CATEGORIES.ID_CAT=PRODUCTS.ID_CAT
+where 
+[ID_PRODUCT]+
+[LABEL_PRODUCT]+
+Convert(varchar,[QTE_IN_STOCK])+
+[PRICE]+
+DESCRIPTION_CAT
+Like '%'+@ID+'%'
+
+
+
+
+Create proc [dbo].[mimo]
+@ID varchar(50)
+as 
+SELECT        item_no, item_id, item_name, item_box, item_piece, item_price, item_price_one, item_price_all, item_desc, item_size, item_box_pice, container_id
+FROM            items
+where   item_no + Convert(varchar, item_id) + item_name + Convert(varchar,item_box )+Convert(varchar, item_piece) +Convert(varchar, item_price) +Convert(varchar, item_price_one) +Convert(varchar, item_price_all) + item_desc + item_size + Convert(varchar,item_box_pice) +Convert(varchar, container_id)  Like '%'+@ID+'%'

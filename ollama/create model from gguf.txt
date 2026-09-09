@@ -1,0 +1,1 @@
+ollama create my_model -f ./Modelfile

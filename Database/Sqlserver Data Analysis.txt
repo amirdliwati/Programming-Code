@@ -1,0 +1,3 @@
+1- enter to computer managment
+2- put admin user to Analysis service
+3- Password same password fo login used

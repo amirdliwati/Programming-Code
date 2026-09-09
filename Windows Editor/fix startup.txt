@@ -1,0 +1,7 @@
+bootrec /FixMbr
+
+bootrec /FixBoot
+
+bootrec /ScanOs
+
+bootrec /RebuildBcd

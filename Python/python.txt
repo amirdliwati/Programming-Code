@@ -1,0 +1,45 @@
+pip install --upgrade pip --user
+
+pip install opencv-python
+
+import cv2
+cv2.__version__
+
+
+import numpy as np
+import cv2
+
+img = cv2.imread('Dress.jpg',1)
+cv2..imshow('Original image',img)
+mask = np.zeros(img.shape[:2],np.uint8)
+
+bgdModel = np.zeros((1,65),np.float64)
+fgdModel = np.zeros((1,65),np.float64)
+
+rect = (60,20,325,503)
+
+cv2.grabCut(img,mask,rect,bgdModel,fgdModel,5,cv2.GC_INIT_WITH_RECT)
+mask2 = np.where((mask==2)|(mask==0),0,1).astype('uint8')
+nimg = img*mask2[:,:,np.newaxis]
+
+cv2.imshow("Extracted image",nimg)
+
+cv2.waitKey()
+cv2.destroyAllWindows()
+
+
+use Symfony\Component\Process\Process;
+
+public function testPythonScript()
+    {
+        $process = new Process("python3 /var/www/laravel/myLaravelApp/app/PythonScript/test.py");
+        $process->run();
+
+        if (!$process->isSuccessful()) {
+            throw new ProcessFailedException($process);
+        }
+
+        $data = $process->getOutput();
+
+        dd($data);
+    }

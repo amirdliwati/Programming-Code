@@ -1,0 +1,70 @@
+
+##composer create-project laravel/laravel amir "5.1.*"
+
+composer create-project --prefer-dist laravel/laravel abd2 "5.8.*"
+composer update
+
+php artisan make:auth
+php artisan ui vue --auth laravel 7
+php artisan migrate
+php artisan migrate:roolbak
+
+php artisan migrate:refresh //delete all tables and then create them
+
+php artisan migrate:reset
+
+php artisan make:migration create_users_table --create=users
+php artisan make:migration create_password_resets_table --create=password_resets
+
+
+php artisan make:controller adminController
+
+
+php artisan make:model Product
+
+php artisan make:model Product --migration //create migrate and model in the same time
+
+composer create-project laravel/laravel Accounting
+
+composer require elibyy/tcpdf-laravel
+
+composer require milon/barcode
+
+composer require intervention/image
+
+composer require laravel/breeze --dev
+php artisan breeze:install
+
+
+
+
+Relationships
+
+One To One 
+hasOne	belongsTo
+
+One To Many
+hasMany	belongsTo
+
+Many To Many
+belongsToMany  belongsToMany
+
+echo $Request;
+
+php artisan make:mail Registration --markdown=emails.registration 
+
+"require": {
+        "php": "^7.2.5",
+        "elibyy/tcpdf-laravel": "^7.0",
+        "fideloper/proxy": "^4.2",
+        "fruitcake/laravel-cors": "^1.0",
+        "guzzlehttp/guzzle": "^6.3",
+        "intervention/image": "^2.5",
+        "laravel/framework": "^7.0",
+        "laravel/tinker": "^2.0",
+        "laravel/ui": "^2.0",
+		"milon/barcode": "^7.0"
+
+'engine' => 'InnoDB ROW_FORMAT=DYNAMIC',
+
+

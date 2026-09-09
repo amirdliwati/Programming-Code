@@ -1,0 +1,2 @@
+To restore your usual Codex profile, run: ollama launch codex-app --restore
+ollama launch chatgpt --restore

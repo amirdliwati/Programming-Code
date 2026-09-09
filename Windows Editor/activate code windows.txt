@@ -1,0 +1,3 @@
+wmic path softwareLicensingService get OA3xOriginalProductKey
+
+JTD6N-D66JY-7X9XQ-9P4BD-TCQGY

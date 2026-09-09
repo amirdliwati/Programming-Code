@@ -1,0 +1,4 @@
+SELECT * FROM `invoices` INNER JOIN invoice_details ON invoices.id = invoice_details.invoice_id
+SELECT * FROM `invoices` LEFT JOIN invoice_details ON invoices.id = invoice_details.invoice_id
+SELECT * FROM `invoices` RIGHT JOIN invoice_details ON invoices.id = invoice_details.invoice_id
+SELECT * FROM `invoices` FULL OUTER JOIN invoice_details ON invoices.id = invoice_details.invoice_id

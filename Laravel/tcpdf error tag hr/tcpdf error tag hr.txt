@@ -1,0 +1,17 @@
+<style>
+                hr {
+                    cap:"";
+                    join:"";
+                    dash:"";
+                    phase:"";
+                    display: block;
+                    margin-top: 0.5em;
+                    margin-bottom: 0.5em;
+                    margin-left: 100px;
+                    margin-right: 100px;
+                    border-style: inset;
+                    border-width: 1px;
+                    color:gray;
+                    background-color:gray;
+                }
+            </style>
