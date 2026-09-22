@@ -11,6 +11,7 @@
 volumes:
   n8n-data:
   sandbox-tls:
+  sandbox-dind-data:
 
 services:
   sandbox-certs:
@@ -75,6 +76,7 @@ services:
       SANDBOX_RUNNER_CONTROL_GRPC_TLS_CLIENT_CA_FILE: /tls/runner/ca.crt
     volumes:
       - sandbox-tls:/tls:ro
+      - sandbox-dind-data:/var/lib/docker
     # Never expose this container's ports publicly â it runs privileged Docker-in-Docker.
 
   n8n:
